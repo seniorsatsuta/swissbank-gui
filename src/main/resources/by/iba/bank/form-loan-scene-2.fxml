@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="866.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.iba.bank.controller.ViewLoanController">
+    <children>
+        <ImageView fitHeight="57.0" fitWidth="64.0" layoutX="684.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@images/logo.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="741.0" layoutY="447.0" text="SWISS BANK" visible="false">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Circle fill="#ffffff66" layoutX="433.0" layoutY="63.0" radius="32.0" stroke="#cfcfcf" strokeType="INSIDE" />
+        <Separator layoutX="465.0" layoutY="14.0" prefHeight="97.0" prefWidth="347.0" />
+        <Separator layoutX="55.0" layoutY="60.0" prefHeight="5.0" prefWidth="347.0" />
+        <Label layoutX="425.0" layoutY="42.0" text="2">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+        <Label layoutX="328.0" layoutY="94.0" text="Offer from the bank">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <Pane fx:id="infoAboutLoan" layoutY="166.0" prefHeight="277.0" prefWidth="866.0" visible="false">
+         <children>
+            <Label layoutX="238.0" layoutY="67.0" prefHeight="27.0" prefWidth="195.0" text="Amount of credit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="92.0" prefHeight="27.0" prefWidth="195.0" text="Credit term">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="117.0" prefHeight="27.0" prefWidth="195.0" text="Interest rate">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="141.0" prefHeight="27.0" prefWidth="195.0" text="Monthly payment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="amount" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="438.0" layoutY="67.0" prefHeight="27.0" prefWidth="159.0" textAlignment="RIGHT" textFill="#d13636">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="term" alignment="TOP_RIGHT" layoutX="438.0" layoutY="92.0" prefHeight="27.0" prefWidth="159.0" textFill="#d13636">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rate" alignment="TOP_RIGHT" layoutX="438.0" layoutY="117.0" prefHeight="27.0" prefWidth="159.0" textFill="#d13636">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthPay" alignment="TOP_RIGHT" layoutX="438.0" layoutY="141.0" prefHeight="27.0" prefWidth="159.0" textFill="#d13636">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button layoutX="242.0" layoutY="462.0" mnemonicParsing="false" onAction="#returnBack" prefHeight="25.0" prefWidth="159.0" styleClass="button-black" stylesheets="@css/style.css" text="Cancel" />
+      <Button fx:id="btnApply" layoutX="443.0" layoutY="462.0" mnemonicParsing="false" onAction="#applyStatement" prefHeight="25.0" prefWidth="159.0" styleClass="button-clicked" stylesheets="@css/style.css" text="Apply" />
+      <Button fx:id="buttonRates" layoutX="442.0" layoutY="140.0" mnemonicParsing="false" onAction="#showInfoAboutEfficientRates" prefHeight="25.0" prefWidth="256.0" styleClass="button-statement" stylesheets="@css/style.css" text="Effective interest rates" />
+      <Button fx:id="btnInfo" layoutX="168.0" layoutY="140.0" mnemonicParsing="false" onAction="#showInfoAboutLoan" prefHeight="26.0" prefWidth="256.0" styleClass="button-statement-selected" stylesheets="@css/style.css" text="Loan information" />
+      <Pane fx:id="infoRates" layoutX="-1.0" layoutY="176.0" prefHeight="277.0" prefWidth="866.0" visible="false">
+         <children>
+            <BarChart fx:id="chartRates" layoutX="30.0" prefHeight="277.0" prefWidth="384.0" style="-fx-background-color: transparent;" styleClass="bar-chart" stylesheets="@css/style.css" title="Loan rates">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Label layoutX="498.0" layoutY="92.0" prefHeight="27.0" prefWidth="195.0" text="Euler's formula">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="498.0" layoutY="117.0" prefHeight="27.0" prefWidth="195.0" text="Erdash formula">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="498.0" layoutY="142.0" prefHeight="27.0" prefWidth="195.0" text="Libor formula">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="eiler" alignment="CENTER_RIGHT" layoutX="566.0" layoutY="92.0" prefHeight="27.0" prefWidth="195.0" text="29%">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="erdash" alignment="CENTER_RIGHT" layoutX="566.0" layoutY="117.0" prefHeight="27.0" prefWidth="195.0" text="12.34%">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="libor" alignment="CENTER_RIGHT" layoutX="566.0" layoutY="142.0" prefHeight="27.0" prefWidth="195.0" text="9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="message" layoutX="54.0" layoutY="256.0" text="ОШИБКА! ПОВТОРИТЕ ЗАПРОС ПОЗЖЕ!" visible="false">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

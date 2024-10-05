@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.iba.bank.controller.ScheduleController">
+   <children>
+      <TableView fx:id="table" prefHeight="616.0" prefWidth="484.0">
+        <columns>
+          <TableColumn fx:id="monthPayment" prefWidth="160.80005490779877" text="Сумма платежа" />
+          <TableColumn fx:id="date" prefWidth="159.2000732421875" text="Дата " />
+            <TableColumn fx:id="balance" prefWidth="162.39996337890625" text="Остаток" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

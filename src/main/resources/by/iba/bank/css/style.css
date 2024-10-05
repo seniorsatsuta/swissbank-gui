@@ -1,0 +1,94 @@
+.button-without-color {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-alignment: center;
+    -fx-text-fill: rgb(75, 91, 243);
+}
+
+.button-clicked{
+    -fx-text-fill: white;
+    -fx-background-color: rgb(75, 91, 243);
+}
+
+.button-black{
+     -fx-text-fill: white;
+     -fx-background-color: black;
+ }
+
+.button-red{
+    -fx-text-fill: white;
+    -fx-background-color: red;
+}
+
+.search-field {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: grey;
+}
+
+.search-field:focused {
+    -fx-border-color: #0099ff;
+}
+
+.i-field{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgba(0, 0, 0, 0.57);
+}
+
+.comboBox {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.text-welcome{
+    -fx-alignment: center;
+    -fx-text-fill: rgb(75, 91, 243);
+}
+
+.accounts-style {
+    -fx-border-color: transparent;
+    -fx-background-color: white;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: never;
+    -fx-spacing: 5;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+    -fx-spacing: 5;
+
+}
+
+.btn-card{
+    -fx-border-color: rgba(0, 0, 0, 0.42);
+    -fx-background-color: white;
+}
+
+
+.hbox-style {
+    -fx-background-color: white;
+    -fx-spacing: 5;
+}
+
+.button-statement{
+    -fx-border-color: rgba(0, 0, 0, 0.57);
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-alignment: center;
+}
+
+.button-statement-selected{
+    -fx-border-color: rgba(0, 0, 0, 0.57);
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: rgba(182, 182, 182, 0.27);
+    -fx-text-fill: black;
+    -fx-alignment: center;
+}
+
+.bar-chart{
+    -fx-background-color: white;
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root style="-fx-background-color: white;" type="Pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="106.0" stroke="BLACK" strokeType="INSIDE" width="174.0">
+         <fill>
+            <LinearGradient endX="0.45075757575757563" endY="0.6060605911594449" startX="0.1780303070942561">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.9166666865348816" fx:id="color" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9899915456771851" green="1.0" blue="0.7400000095367432" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <GridPane prefHeight="41.0" prefWidth="174.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="currency" alignment="CENTER" prefHeight="26.0" prefWidth="62.0" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="26.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Mastercard-Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Label fx:id="balance" alignment="CENTER" layoutY="36.0" prefHeight="35.0" prefWidth="174.0" textAlignment="CENTER">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lName" alignment="TOP_RIGHT" layoutX="14.0" layoutY="82.0" prefHeight="17.0" prefWidth="147.0" textFill="#434343" />
+   </children>
+</fx:root>

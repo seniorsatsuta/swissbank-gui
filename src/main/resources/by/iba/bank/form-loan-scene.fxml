@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="866.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.iba.bank.controller.FormLoanController">
+    <children>
+        <ImageView fitHeight="57.0" fitWidth="64.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@images/logo.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="57.0" layoutY="465.0" text="SWISS BANK" visible="false">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfAmount" layoutX="280.0" layoutY="180.0" prefHeight="25.0" prefWidth="309.0" styleClass="i-field" stylesheets="@css/style.css" />
+        <TextField fx:id="tfTerm" layoutX="280.0" layoutY="325.0" prefHeight="25.0" prefWidth="309.0" styleClass="i-field" stylesheets="@css/style.css" />
+        <DatePicker fx:id="myDatePicker" dayCellFactory="${controller.dayCellFactory}" editable="false" layoutX="278.0" layoutY="257.0" prefHeight="25.0" prefWidth="309.0" styleClass="i-field" stylesheets="@css/style.css" />
+        <Label layoutX="280.0" layoutY="163.0" text="Amount" />
+        <Label layoutX="280.0" layoutY="308.0" text="Loan term (from one year and above)" />
+        <Label layoutX="278.0" layoutY="236.0" text="Date" />
+        <Button fx:id="cancel" layoutX="280.0" layoutY="398.0" mnemonicParsing="false" onAction="#returnBack" prefHeight="25.0" prefWidth="144.0" styleClass="button-black" stylesheets="@css/style.css" text="Cancel" />
+        <Button fx:id="ok" layoutX="445.0" layoutY="398.0" mnemonicParsing="false" onAction="#sendRequest" prefHeight="25.0" prefWidth="144.0" styleClass="button-clicked" stylesheets="@css/style.css" text="Send" />
+        <Circle fill="#ffffff66" layoutX="433.0" layoutY="63.0" radius="32.0" stroke="#cfcfcf" strokeType="INSIDE" />
+        <Separator layoutX="465.0" layoutY="14.0" prefHeight="97.0" prefWidth="347.0" />
+        <Separator layoutX="55.0" layoutY="60.0" prefHeight="5.0" prefWidth="347.0" />
+        <Label layoutX="425.0" layoutY="42.0" text="1">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+        <Label layoutX="292.0" layoutY="111.0" text="Creating a loan application">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
